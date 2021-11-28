@@ -20,7 +20,10 @@ app.get("/wyr", (req, res) => {
   res.json(itemwyr)
 })
 
-
+app.get("/radio", function(req, res) {
+	res.sendFile(path.join(_dirname, "/radio.html")
+	);
+});
 const listener = app.listen(3000, () => {
-  console.log('server started');
+  console.log('https://localhost:3000');
 });
